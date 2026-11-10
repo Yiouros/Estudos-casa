@@ -1,0 +1,540 @@
+
+/* =========================================
+   1. VARIÁVEIS GLOBAIS DO SITE
+   ========================================= */
+
+/* :root representa o elemento principal do HTML.
+   Aqui criamos variáveis para reutilizar as cores
+   em diferentes partes do site. */
+
+:root {
+    --fundo: #effaff;           /* Azul muito claro de fundo */
+    --escuro: #123b56;          /* Azul escuro do cabeçalho */
+    --texto: #203746;           /* Cor padrão dos textos */
+    --dourado: #88d2f5;         /* Amarelo tropical para destaques */
+    --vermelho: #00a6c7;        /* Azul turquesa dos botões */
+    --vermelho-escuro: #007f9e; /* Turquesa escuro ao passar o mouse */
+    --borda: #b8e3ef;           /* Azul claro das bordas */
+    --branco: #ffffff;          /* Branco para cartões e elementos */
+}
+
+
+/* =========================================
+   2. CONFIGURAÇÃO GERAL
+   ========================================= */
+
+/* O seletor * (universal) seleciona todos os
+   elementos HTML da página. */
+
+* {
+    box-sizing: border-box; /* Inclui padding e borda no tamanho total */
+}
+
+
+/* html representa a estrutura principal da página. */
+
+html {
+    scroll-behavior: smooth; /* Faz a rolagem da página ser suave */
+}
+
+
+/* body representa o corpo da página, onde fica
+   todo o conteúdo visível do site. */
+
+body {
+    margin: 0; /* Remove a margem padrão do navegador */
+    background: var(--fundo); /* Define a cor de fundo */
+    color: var(--texto); /* Define a cor padrão dos textos */
+    font-family: Arial, Helvetica, sans-serif; /* Define a fonte */
+    line-height: 1.6; /* Define o espaçamento entre as linhas */
+}
+
+
+/* img seleciona todas as imagens do site. */
+
+img {
+    max-width: 100%; /* Impede que a imagem ultrapasse seu espaço */
+}
+
+
+/* =========================================
+   3. CONTAINER PRINCIPAL
+   ========================================= */
+
+/* .container é uma classe usada para centralizar
+   e limitar a largura do conteúdo do site. */
+
+.container {
+    width: min(90%, 1120px); /* Usa 90% da tela, até 1120px */
+    margin: 0 auto; /* Centraliza horizontalmente */
+}
+
+
+/* =========================================
+   4. CABEÇALHO DO SITE
+   ========================================= */
+
+/* .cabecalho estiliza a parte superior do site. */
+
+.cabecalho {
+    background: var(--escuro); /* Fundo escuro */
+    color: var(--branco); /* Texto branco */
+}
+
+
+/* .cabecalho-conteudo organiza o logotipo e o menu. */
+
+.cabecalho-conteudo {
+    display: flex; /* Ativa o Flexbox */
+    flex-direction: column; /* Organiza os elementos em coluna */
+    gap: 1rem; /* Espaço entre os elementos */
+    padding: 1rem 0; /* Espaçamento interno superior e inferior */
+}
+
+
+/* .logo estiliza o logotipo e seu texto. */
+
+.logo {
+    display: flex; /* Coloca imagem e texto lado a lado */
+    align-items: center; /* Alinha os elementos verticalmente */
+    gap: 0.75rem; /* Espaço entre a imagem e o texto */
+    color: var(--branco); /* Cor branca */
+    font-size: 1.2rem; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+    text-decoration: none; /* Remove o sublinhado do link */
+}
+
+
+/* .logo img seleciona somente a imagem dentro do logotipo. */
+
+.logo img {
+    width: 55px; /* Largura da imagem */
+    height: 55px; /* Altura da imagem */
+    border: 2px solid var(--dourado); /* Borda dourada */
+    border-radius: 50%; /* Transforma a imagem em círculo */
+    object-fit: cover; /* Preenche o espaço sem distorcer a imagem */
+}
+
+
+/* =========================================
+   5. MENU DE NAVEGAÇÃO
+   ========================================= */
+
+/* nav representa a área de navegação do site. */
+
+nav {
+    display: flex; /* Organiza os links com Flexbox */
+    flex-wrap: wrap; /* Permite quebrar os links em outra linha */
+    gap: 1rem; /* Espaço entre os links */
+}
+
+
+/* nav a seleciona todos os links dentro do menu. */
+
+nav a {
+    color: var(--branco); /* Cor branca dos links */
+    font-weight: bold; /* Deixa os links em negrito */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+
+/* :hover aplica um efeito quando o mouse passa sobre o link. */
+
+nav a:hover {
+    color: var(--dourado); /* Muda a cor do link para dourado */
+}
+
+
+/* =========================================
+   6. SEÇÃO PRINCIPAL (HERO)
+   ========================================= */
+
+/* .hero representa a primeira seção de destaque do site,
+   geralmente contendo título, texto e ilustração. */
+
+.hero {
+    padding: 4rem 0; /* Espaçamento interno superior e inferior */
+    background: linear-gradient(135deg, var(--escuro), #211714);
+    /* Cria um degradê diagonal entre duas cores */
+    color: var(--branco); /* Define os textos como brancos */
+}
+
+
+/* .hero-conteudo organiza o texto e a ilustração. */
+
+.hero-conteudo {
+    display: grid; /* Ativa o CSS Grid */
+    gap: 2rem; /* Espaço entre os elementos */
+    align-items: center; /* Alinha os elementos verticalmente */
+}
+
+
+/* .destaque estiliza um pequeno texto de destaque. */
+
+.destaque {
+    margin: 0 0 0.5rem; /* Remove margens, exceto a inferior */
+    color: var(--dourado); /* Texto dourado */
+    font-weight: bold; /* Texto em negrito */
+    letter-spacing: 0.08em; /* Aumenta o espaço entre as letras */
+    text-transform: uppercase; /* Transforma letras em maiúsculas */
+}
+
+
+/* h1, h2 e h3 representam os títulos HTML.
+   As configurações abaixo são aplicadas aos três. */
+
+h1,
+h2,
+h3 {
+    margin-top: 0; /* Remove a margem superior */
+    line-height: 1.15; /* Aproxima as linhas dos títulos */
+}
+
+
+/* h1 representa o título principal da página. */
+
+h1 {
+    max-width: 12ch; /* Limita a largura do título */
+    margin-bottom: 1rem; /* Espaço abaixo do título */
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    /* Tamanho responsivo: mínimo 2.5rem e máximo 4.5rem */
+}
+
+
+/* h2 representa os títulos secundários. */
+
+h2 {
+    font-size: 2rem; /* Define o tamanho do título */
+}
+
+
+/* .hero-texto estiliza o parágrafo da seção principal. */
+
+.hero-texto {
+    max-width: 50ch; /* Limita a largura do texto */
+    margin-bottom: 1.5rem; /* Espaço abaixo do parágrafo */
+    color: #f4e5d0; /* Cor bege clara */
+    font-size: 1.1rem; /* Aumenta um pouco a fonte */
+}
+
+
+/* .hero-ilustracao estiliza a área da ilustração. */
+
+.hero-ilustracao {
+    display: grid; /* Ativa o CSS Grid */
+    min-height: 260px; /* Define a altura mínima */
+    place-items: center; /* Centraliza o conteúdo horizontal e verticalmente */
+    border: 2px solid var(--dourado); /* Borda dourada */
+    border-radius: 30px; /* Arredonda os cantos */
+    background: rgba(255, 255, 255, 0.05);
+    /* Fundo branco com 5% de opacidade */
+    font-size: 9rem; /* Aumenta o tamanho do ícone ou emoji */
+}
+
+
+/* =========================================
+   7. BOTÕES DO SITE
+   ========================================= */
+
+/* .botao seleciona os botões com essa classe.
+   .card a seleciona os links que estão dentro dos cartões.
+   Ambos recebem a mesma aparência. */
+
+.botao,
+.card a {
+    display: inline-block; /* Permite aplicar dimensões e espaçamentos */
+    padding: 0.75rem 1.25rem; /* Espaçamento interno */
+    border-radius: 999px; /* Deixa os cantos arredondados */
+    background: var(--vermelho); /* Fundo vermelho */
+    color: var(--branco); /* Texto branco */
+    font-weight: bold; /* Texto em negrito */
+    text-decoration: none; /* Remove o sublinhado */
+}
+
+
+/* Efeito aplicado aos botões quando o mouse passa sobre eles. */
+
+.botao:hover,
+.card a:hover {
+    background: var(--vermelho-escuro); /* Escurece o fundo */
+}
+
+
+/* =========================================
+   8. SEÇÃO DO CARDÁPIO
+   ========================================= */
+
+/* .cardapio estiliza a seção onde ficam os produtos. */
+
+.cardapio {
+    padding: 4rem 0; /* Espaçamento interno superior e inferior */
+}
+
+
+/* .titulo-secao estiliza a área do título do cardápio. */
+
+.titulo-secao {
+    max-width: 650px; /* Limita a largura máxima */
+    margin-bottom: 2rem; /* Espaço abaixo da seção */
+}
+
+
+/* Seleciona o último parágrafo dentro de .titulo-secao.
+   :last-child identifica o último elemento filho. */
+
+.titulo-secao p:last-child {
+    color: #3244e2; /* Define a cor do último parágrafo */
+}
+
+
+/* =========================================
+   9. GRADE DE PRODUTOS
+   ========================================= */
+
+/* .grade-produtos organiza os cartões dos produtos. */
+
+.grade-produtos {
+    display: grid; /* Ativa o CSS Grid */
+    gap: 1.5rem; /* Espaço entre os cartões */
+}
+
+
+/* =========================================
+   10. CARTÕES DOS PRODUTOS
+   ========================================= */
+
+/* .card estiliza cada cartão individual do cardápio. */
+
+.card {
+    position: relative; /* Serve de referência para elementos absolutos */
+    display: flex; /* Ativa o Flexbox */
+    flex-direction: column; /* Organiza o conteúdo em coluna */
+    padding: 1.5rem; /* Espaçamento interno */
+    border: 1px solid var(--borda); /* Borda fina */
+    border-radius: 20px; /* Arredonda os cantos */
+    background: var(--branco); /* Fundo branco */
+    box-shadow: 0 15px 35px rgba(70, 49, 32, 0.1);
+    /* Adiciona sombra ao redor do cartão */
+}
+
+
+/* .card-destaque identifica um cartão especial do cardápio. */
+
+.card-destaque {
+    border: 3px solid var(--dourado); /* Borda dourada mais grossa */
+}
+
+
+/* =========================================
+   11. SELO DOS PRODUTOS
+   ========================================= */
+
+/* .selo estiliza etiquetas como "Mais vendido" ou "Destaque". */
+
+.selo {
+    position: absolute; /* Permite posicionamento independente */
+    top: 1rem; /* Distância em relação ao topo do cartão */
+    right: 1rem; /* Distância em relação à direita do cartão */
+    padding: 0.25rem 0.65rem; /* Espaçamento interno */
+    border-radius: 999px; /* Deixa o selo arredondado */
+    background: var(--vermelho); /* Fundo vermelho */
+    color: var(--branco); /* Texto branco */
+    font-size: 0.8rem; /* Tamanho da fonte */
+    font-weight: bold; /* Texto em negrito */
+}
+
+
+/* =========================================
+   12. ÍCONE DOS CARTÕES
+   ========================================= */
+
+/* .card-icone estiliza o ícone ou emoji do produto. */
+
+.card-icone {
+    margin-bottom: 1rem; /* Espaço abaixo do ícone */
+    font-size: 4rem; /* Tamanho do ícone */
+}
+
+
+/* Seleciona todos os parágrafos que estão dentro dos cartões. */
+
+.card p {
+    color: #29279b; /* Define a cor dos parágrafos */
+}
+
+
+/* =========================================
+   13. RODAPÉ DOS CARTÕES
+   ========================================= */
+
+/* .card-rodape organiza o preço e o botão do produto. */
+
+.card-rodape {
+    display: flex; /* Coloca os elementos lado a lado */
+    align-items: center; /* Alinha verticalmente ao centro */
+    justify-content: space-between; /* Separa os elementos */
+    gap: 1rem; /* Espaço entre preço e botão */
+    margin-top: auto; /* Empurra o rodapé para baixo no cartão */
+    padding-top: 1rem; /* Espaçamento interno superior */
+}
+
+
+/* Seleciona o elemento strong dentro do rodapé do cartão.
+   Normalmente é utilizado para destacar o preço. */
+
+.card-rodape strong {
+    color: var(--vermelho); /* Cor vermelha */
+    font-size: 1.2rem; /* Aumenta o tamanho do preço */
+}
+
+
+/* Ajusta especificamente os links dentro dos cartões. */
+
+.card a {
+    padding: 0.5rem 1rem; /* Espaçamento interno menor */
+    font-size: 0.9rem; /* Diminui o tamanho da fonte */
+}
+
+
+/* =========================================
+   14. SEÇÃO DE PEDIDOS
+   ========================================= */
+
+/* .pedido estiliza a seção que explica como fazer um pedido. */
+
+.pedido {
+    padding: 4rem 0; /* Espaçamento interno superior e inferior */
+    background: #387cc9; /* Fundo bege claro */
+}
+
+
+/* .pedido-conteudo organiza o conteúdo da seção de pedidos. */
+
+.pedido-conteudo {
+    display: grid; /* Ativa o CSS Grid */
+    gap: 2rem; /* Espaço entre os elementos */
+}
+
+
+/* =========================================
+   15. LISTA DE PEDIDOS
+   ========================================= */
+
+/* ol representa uma lista ordenada.
+   Aqui removemos a aparência padrão da lista. */
+
+.pedido ol {
+    display: grid; /* Organiza os itens em grade */
+    gap: 0.75rem; /* Espaço entre os itens */
+    margin: 0; /* Remove as margens */
+    padding: 0; /* Remove o preenchimento */
+    list-style: none; /* Remove a numeração padrão */
+}
+
+
+/* li representa cada item da lista de pedidos. */
+
+.pedido li {
+    display: flex; /* Organiza os elementos lado a lado */
+    align-items: center; /* Alinha verticalmente ao centro */
+    gap: 0.75rem; /* Espaço entre os elementos */
+    padding: 1rem; /* Espaçamento interno */
+    border: 1px solid var(--borda); /* Cria uma borda */
+    border-radius: 12px; /* Arredonda os cantos */
+    background: var(--branco); /* Fundo branco */
+}
+
+
+/* span seleciona o elemento que contém o número
+   ou indicador de cada etapa do pedido. */
+
+.pedido li span {
+    display: grid; /* Ativa o CSS Grid */
+    width: 35px; /* Largura do círculo */
+    height: 35px; /* Altura do círculo */
+    place-items: center; /* Centraliza o número */
+    border-radius: 50%; /* Transforma em círculo */
+    background: var(--dourado); /* Fundo dourado */
+    font-weight: bold; /* Número em negrito */
+}
+
+
+/* =========================================
+   16. RODAPÉ DO SITE
+   ========================================= */
+
+/* footer representa a parte inferior da página. */
+
+footer {
+    padding: 2rem 0; /* Espaçamento interno superior e inferior */
+    background: #211714; /* Fundo escuro */
+    color: #f4e5d0; /* Cor clara dos textos */
+}
+
+
+/* .rodape-conteudo organiza as informações do rodapé. */
+
+.rodape-conteudo {
+    display: grid; /* Ativa o CSS Grid */
+    gap: 1rem; /* Espaço entre os elementos */
+}
+
+
+/* Seleciona todos os parágrafos dentro do rodapé. */
+
+footer p {
+    margin: 0.25rem 0; /* Margem superior e inferior */
+}
+
+
+/* =========================================
+   17. RESPONSIVIDADE DO SITE
+   ========================================= */
+
+/* @media permite adaptar o site a diferentes telas.
+   min-width: 700px significa que estas regras
+   serão aplicadas em telas com largura de 700px ou mais. */
+
+@media (min-width: 700px) {
+
+    /* Cabeçalho e rodapé passam a organizar
+       os elementos horizontalmente. */
+
+    .cabecalho-conteudo,
+    .rodape-conteudo {
+        flex-direction: row; /* Organiza em linha */
+        align-items: center; /* Alinha verticalmente */
+        justify-content: space-between; /* Distribui os elementos */
+    }
+
+    /* Cabeçalho utiliza Flexbox em telas maiores. */
+
+    .cabecalho-conteudo {
+        display: flex; /* Ativa o Flexbox */
+    }
+
+    /* Rodapé também utiliza Flexbox. */
+
+    .rodape-conteudo {
+        display: flex; /* Ativa o Flexbox */
+    }
+
+    /* Seção principal e pedidos passam a ter duas colunas. */
+
+    .hero-conteudo,
+    .pedido-conteudo {
+        grid-template-columns: 1fr 1fr;
+        /* Divide o espaço em duas colunas iguais */
+    }
+
+    /* Os produtos passam a ser organizados em três colunas. */
+
+    .grade-produtos {
+        grid-template-columns: repeat(3, 1fr);
+        /* Cria três colunas de tamanhos iguais */
+    }
+}
+
+/* =========================================
+   FIM DO ARQUIVO CSS
+   ========================================= */

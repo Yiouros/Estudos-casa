@@ -1,0 +1,366 @@
+
+<!DOCTYPE html>
+<!-- Informa ao navegador que o documento utiliza HTML5. -->
+
+<html lang="pt-BR">
+<!-- Tag principal do documento HTML.
+     O atributo lang="pt-BR" informa que o idioma da página é português do Brasil. -->
+
+<head>
+    <!-- A tag head contém configurações e informações sobre a página.
+         Essas informações geralmente não aparecem diretamente no conteúdo do site. -->
+
+    <meta charset="UTF-8">
+    <!-- Define a codificação de caracteres como UTF-8.
+         Permite exibir corretamente acentos, cedilhas e caracteres especiais. -->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Configura a visualização em dispositivos móveis.
+         width=device-width adapta a largura da página à tela do dispositivo.
+         initial-scale=1.0 define o zoom inicial como 100%. -->
+
+    <meta name="description" content="Cardápio da gelaria Gelo No Espeto.">
+    <!-- Define uma descrição da página.
+         Essa descrição pode ser utilizada pelos mecanismos de busca. -->
+
+    <title>Gelo No Espeto | Gelaria</title>
+    <!-- Define o título da página exibido na aba do navegador. -->
+
+    <link rel="icon" href="img/LogoGNP.jpg">
+    <!-- Adiciona um ícone à aba do navegador (favicon).
+         O arquivo utilizado é logo.jpg, localizado na pasta img. -->
+
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Conecta o documento HTML ao arquivo CSS externo.
+         O CSS controla cores, fontes, tamanhos, espaçamentos e aparência. -->
+
+</head>
+<!-- Finaliza a área de configurações do documento. -->
+
+<body>
+    <!-- A tag body contém todo o conteúdo visível da página. -->
+
+    <header class="cabecalho">
+        <!-- Define o cabeçalho do site.
+             A classe cabecalho permite aplicar estilos através do CSS. -->
+
+        <div class="container cabecalho-conteudo">
+            <!-- Cria uma divisão para agrupar os elementos do cabeçalho.
+                 As classes container e cabecalho-conteudo permitem estilização. -->
+
+            <a class="logo" href="#inicio">
+                <!-- Cria um link clicável.
+                     href="#inicio" direciona para o elemento que possui id="inicio".
+                     A classe logo permite estilizar o link. -->
+
+                <img src="img/LogoGNP.jpg" alt="Logo Gelo No Espeto">
+                <!-- Insere uma imagem na página.
+                     src indica o caminho do arquivo da imagem.
+                     alt fornece uma descrição alternativa da imagem. -->
+
+                <span>Gelo No Espeto</span>
+                <!-- A tag span agrupa um pequeno trecho de texto.
+                     É utilizada para estilização sem criar uma nova linha por padrão. -->
+
+            </a>
+            <!-- Finaliza o link da logo. -->
+
+            <nav aria-label="Navegação principal">
+                <!-- Define uma área de navegação do site.
+                     aria-label fornece uma identificação acessível
+                     para leitores de tela. -->
+
+                <a href="#inicio">Início</a>
+                <!-- Link que direciona para a seção com id="inicio". -->
+
+                <a href="#cardapio">Cardápio</a>
+                <!-- Link que direciona para a seção com id="cardapio". -->
+
+                <a href="#contato">Contato</a>
+                <!-- Link que direciona para o rodapé com id="contato". -->
+
+            </nav>
+            <!-- Finaliza a área de navegação. -->
+
+        </div>
+        <!-- Finaliza a divisão do conteúdo do cabeçalho. -->
+
+    </header>
+    <!-- Finaliza o cabeçalho do site. -->
+
+    <main>
+        <!-- Define o conteúdo principal da página.
+             Deve conter o conteúdo central e mais importante do site. -->
+
+        <section class="hero" id="inicio">
+            <!-- Cria uma seção de apresentação inicial (Hero).
+                 class="hero" permite aplicar estilos CSS.
+                 id="inicio" identifica a seção para os links internos. -->
+
+            <div class="container hero-conteudo">
+                <!-- Agrupa os elementos da seção inicial.
+                     As classes permitem controlar o layout pelo CSS. -->
+
+                <div>
+                    <!-- Cria uma divisão para agrupar textos e o botão. -->
+
+                    <p class="destaque">Gelos Espetados</p>
+                    <!-- A tag p cria um parágrafo.
+                         A classe destaque permite destacar esse texto visualmente. -->
+
+                    <h1>A iguaria que domina o calor.</h1>
+                    <!-- Define o título principal da página.
+                         h1 representa o título de maior importância do conteúdo. -->
+
+                    <p class="hero-texto">
+                        Escolha seu Gelo favorito e peça o seu!
+                    </p>
+                    <!-- Apresenta um texto descritivo.
+                         A classe hero-texto permite personalizar sua aparência. -->
+
+                    <a class="botao" href="#cardapio">Ver cardápio</a>
+                    <!-- Cria um link com aparência de botão.
+                         Ao clicar, o visitante é direcionado para o cardápio.
+                         A classe botao permite aplicar o estilo de botão no CSS. -->
+
+                </div>
+                <!-- Finaliza a divisão dos textos e do botão. -->
+
+                <div class="hero-ilustracao" aria-hidden="true">🧊</div>
+                <!-- Cria uma divisão que apresenta um emoji de hambúrguer.
+                     A classe hero-ilustracao permite estilizar o elemento.
+                     aria-hidden="true" faz com que leitores de tela ignorem
+                     esse elemento, pois ele tem função apenas decorativa. -->
+
+            </div>
+            <!-- Finaliza o conteúdo da apresentação inicial. -->
+
+        </section>
+        <!-- Finaliza a seção inicial. -->
+
+        <section class="cardapio" id="cardapio">
+            <!-- Cria a seção do cardápio.
+                 A classe cardapio permite estilização.
+                 O id cardapio permite acessar a seção através de links. -->
+
+            <div class="container">
+                <!-- Cria um contêiner para organizar o conteúdo. -->
+
+                <div class="titulo-secao">
+                    <!-- Agrupa os títulos e a descrição da seção. -->
+
+                    <p class="destaque">Nosso cardápio</p>
+                    <!-- Apresenta um pequeno texto de destaque. -->
+
+                    <h2>Escolha seu Gelo</h2>
+                    <!-- Define o título de segundo nível da seção. -->
+
+                    <p>Produtos e preços fictícios para o projeto da turma.</p>
+                    <!-- Apresenta uma descrição informativa sobre o cardápio. -->
+
+                </div>
+                <!-- Finaliza o agrupamento do título da seção. -->
+
+                <div class="grade-produtos">
+                    <!-- Cria uma área para organizar os produtos em uma grade.
+                         A classe pode utilizar CSS Grid ou Flexbox para organizar
+                         os cartões na página. -->
+
+                    <article class="card">
+                        <!-- A tag article representa um conteúdo independente.
+                             Neste caso, representa o cartão de um hambúrguer. -->
+
+                        <div class="card-icone" aria-hidden="true">🥶
+                         
+                        </div>
+                        <!-- Exibe um emoji decorativo de hambúrguer.
+                             aria-hidden="true" oculta o emoji dos leitores de tela. -->
+
+                        <h3>"Friozin" na barriga</h3>
+                        <!-- Define o nome do produto como título de terceiro nível. -->
+
+                        <p>gelo gelado direto das geleiras.</p>
+                        <!-- Apresenta a descrição e os ingredientes do produto. -->
+
+                        <div class="card-rodape">
+                            <!-- Agrupa o preço e o link de escolha do produto. -->
+
+                            <strong>R$ 13,70</strong>
+                            <!-- A tag strong indica que o conteúdo possui importância.
+                                 Geralmente é exibida em negrito. -->
+
+                            <a href="#pedido">Escolher</a>
+                            <!-- Cria um link que direciona para a seção de pedidos. -->
+
+                        </div>
+                        <!-- Finaliza o rodapé do cartão. -->
+
+                    </article>
+                    <!-- Finaliza o primeiro cartão de produto. -->
+
+                    <article class="card card-destaque">
+                        <!-- Cria o segundo cartão de produto.
+                             Possui duas classes:
+                             card aplica os estilos gerais do cartão.
+                             card-destaque permite destacar esse produto. -->
+
+                        <span class="selo">Favorito</span>
+                        <!-- Exibe um pequeno selo com a palavra Favorito.
+                             A classe selo permite personalizar sua aparência. -->
+
+                        <div class="card-icone" aria-hidden="true">🏒
+                       
+                        </div>
+                        <!-- Exibe um emoji decorativo de bacon. -->
+
+                        <h3>Gelo Raspado</h3>
+                        <!-- Define o nome do segundo hambúrguer. -->
+
+                        <p>Gelo retirado de forma conciente das pistas de hoquei.</p>
+                        <!-- Apresenta a descrição do segundo produto. -->
+
+                        <div class="card-rodape">
+                            <!-- Agrupa o preço e o link do segundo produto. -->
+
+                            <strong>R$ 26,50</strong>
+                            <!-- Exibe o preço do segundo hambúrguer em destaque. -->
+
+                            <a href="#pedido">Escolher</a>
+                            <!-- Direciona o visitante para a seção de pedidos. -->
+
+                        </div>
+                        <!-- Finaliza o rodapé do segundo cartão. -->
+
+                    </article>
+                    <!-- Finaliza o segundo cartão de produto. -->
+
+                    <article class="card">
+                        <!-- Cria o terceiro cartão de produto.
+                             Utiliza a classe card para manter o padrão visual. -->
+
+                        <div class="card-icone" aria-hidden="true">🧊
+                         
+                        </div>
+                        <!-- Exibe um emoji decorativo de vegetais. -->
+
+                        <h3>Gelo No Espeto</h3>
+                        <!-- Define o nome do terceiro hambúrguer. -->
+
+                        <p>o favorito, gelo no espeto acompanho de molho gelado e raspas de neve.</p>
+                        <!-- Apresenta a descrição do terceiro produto. -->
+
+                        <div class="card-rodape">
+                            <!-- Agrupa o preço e o link do terceiro produto. -->
+
+                            <strong>R$ 27,90</strong>
+                            <!-- Exibe o preço do terceiro hambúrguer. -->
+
+                            <a href="#pedido">Escolher</a>
+                            <!-- Direciona para a seção de pedidos. -->
+
+                        </div>
+                        <!-- Finaliza o rodapé do terceiro cartão. -->
+
+                    </article>
+                    <!-- Finaliza o terceiro cartão de produto. -->
+
+                </div>
+                <!-- Finaliza a grade que organiza os produtos. -->
+
+            </div>
+            <!-- Finaliza o contêiner do cardápio. -->
+
+        </section>
+        <!-- Finaliza a seção do cardápio. -->
+
+        <section class="pedido" id="pedido">
+            <!-- Cria a seção que explica como realizar um pedido.
+                 O id pedido permite que os links dos produtos direcionem
+                 o visitante até esta parte da página. -->
+
+            <div class="container pedido-conteudo">
+                <!-- Agrupa os elementos da seção de pedidos. -->
+
+                <div>
+                    <!-- Cria uma divisão para organizar os títulos. -->
+
+                    <p class="destaque">Como pedir</p>
+                    <!-- Exibe um texto de destaque. -->
+
+                    <h2>Um fluxo simples</h2>
+                    <!-- Define o título da seção de pedidos. -->
+
+                </div>
+                <!-- Finaliza a divisão dos títulos. -->
+
+                <ol>
+                    <!-- Cria uma lista ordenada.
+                         Os itens recebem uma sequência numérica. -->
+
+                    <li><span>1</span> Escolha um gelo.</li>
+                    <!-- li representa um item da lista.
+                         span destaca visualmente o número 1. -->
+
+                    <li><span>2</span> Informe os adicionais.</li>
+                    <!-- Segundo item da lista de instruções. -->
+
+                    <li><span>3</span> Confirme endereço e pagamento.</li>
+                    <!-- Terceiro item da lista de instruções. -->
+
+                    <li><span>4</span> Envie o pedido pelo WhatsApp.</li>
+                    <!-- Quarto item da lista de instruções. -->
+
+                </ol>
+                <!-- Finaliza a lista ordenada. -->
+
+            </div>
+            <!-- Finaliza o contêiner da seção de pedidos. -->
+
+        </section>
+        <!-- Finaliza a seção de pedidos. -->
+
+    </main>
+    <!-- Finaliza o conteúdo principal da página. -->
+
+    <footer id="contato">
+        <!-- Define o rodapé do site.
+             O id contato permite acessar essa seção através do menu. -->
+
+        <div class="container rodape-conteudo">
+            <!-- Cria um contêiner para organizar as informações do rodapé. -->
+
+            <div>
+                <!-- Agrupa o nome da hamburgueria e uma descrição. -->
+
+                <strong>Gelo No Espeto</strong>
+                <!-- Exibe o nome da hamburgueria em destaque. -->
+
+                <p>Projeto didático — dados fictícios.</p>
+                <!-- Informa que o site é um projeto educacional. -->
+
+            </div>
+            <!-- Finaliza o primeiro agrupamento do rodapé. -->
+
+            <div>
+                <!-- Agrupa as informações de funcionamento e localização. -->
+
+                <p>Terça a domingo · 18h às 23h</p>
+                <!-- Informa os dias e horários de funcionamento fictícios. -->
+
+                <p>Parnaíba — PI</p>
+                <!-- Apresenta a localização da hamburgueria. -->
+
+            </div>
+            <!-- Finaliza o segundo agrupamento do rodapé. -->
+
+        </div>
+        <!-- Finaliza o contêiner do rodapé. -->
+
+    </footer>
+    <!-- Finaliza o rodapé da página. -->
+
+</body>
+<!-- Finaliza o corpo do documento HTML. -->
+
+</html>
+<!-- Finaliza o documento HTML. -->
